@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA9045E2161D17AA00E37889 /* Space.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9045E1161D17AA00E37889 /* Space.m */; };
 		EAB9B867161CCEDB00F7EDEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9B866161CCEDB00F7EDEF /* UIKit.framework */; };
 		EAB9B869161CCEDB00F7EDEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9B868161CCEDB00F7EDEF /* Foundation.framework */; };
 		EAB9B86B161CCEDB00F7EDEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9B86A161CCEDB00F7EDEF /* CoreGraphics.framework */; };
@@ -24,6 +25,17 @@
 		EAB9B890161CCEDB00F7EDEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB9B868161CCEDB00F7EDEF /* Foundation.framework */; };
 		EAB9B898161CCEDB00F7EDEF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B896161CCEDB00F7EDEF /* InfoPlist.strings */; };
 		EAB9B89B161CCEDB00F7EDEF /* HangmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9B89A161CCEDB00F7EDEF /* HangmanTests.m */; };
+		EAB9B8AD161CCFAA00F7EDEF /* HangmanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9B8AC161CCFAA00F7EDEF /* HangmanModel.m */; };
+		EAB9B8B6161CD70E00F7EDEF /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8B5161CD70E00F7EDEF /* placeholder.png */; };
+		EAB9B8B8161CE0DC00F7EDEF /* HangmanWords.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9B8B7161CE0DC00F7EDEF /* HangmanWords.m */; };
+		EAB9B8BB161CE0F000F7EDEF /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8BA161CE0F000F7EDEF /* words.plist */; };
+		EAB9B8C3161CE0FF00F7EDEF /* hang5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8BC161CE0FF00F7EDEF /* hang5.jpg */; };
+		EAB9B8C4161CE0FF00F7EDEF /* hang6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8BD161CE0FF00F7EDEF /* hang6.jpg */; };
+		EAB9B8C5161CE0FF00F7EDEF /* hang7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8BE161CE0FF00F7EDEF /* hang7.jpg */; };
+		EAB9B8C6161CE0FF00F7EDEF /* hang8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8BF161CE0FF00F7EDEF /* hang8.jpg */; };
+		EAB9B8C7161CE0FF00F7EDEF /* hang9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8C0161CE0FF00F7EDEF /* hang9.jpg */; };
+		EAB9B8C8161CE0FF00F7EDEF /* hang10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8C1161CE0FF00F7EDEF /* hang10.jpg */; };
+		EAB9B8C9161CE0FF00F7EDEF /* hang11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAB9B8C2161CE0FF00F7EDEF /* hang11.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA9045E0161D17AA00E37889 /* Space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Space.h; sourceTree = "<group>"; };
+		EA9045E1161D17AA00E37889 /* Space.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Space.m; sourceTree = "<group>"; };
 		EAB9B862161CCEDB00F7EDEF /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB9B866161CCEDB00F7EDEF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EAB9B868161CCEDB00F7EDEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +74,19 @@
 		EAB9B897161CCEDB00F7EDEF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EAB9B899161CCEDB00F7EDEF /* HangmanTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangmanTests.h; sourceTree = "<group>"; };
 		EAB9B89A161CCEDB00F7EDEF /* HangmanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangmanTests.m; sourceTree = "<group>"; };
+		EAB9B8AB161CCFAA00F7EDEF /* HangmanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangmanModel.h; sourceTree = "<group>"; };
+		EAB9B8AC161CCFAA00F7EDEF /* HangmanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HangmanModel.m; sourceTree = "<group>"; };
+		EAB9B8B5161CD70E00F7EDEF /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		EAB9B8B7161CE0DC00F7EDEF /* HangmanWords.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HangmanWords.m; path = Words/HangmanWords.m; sourceTree = "<group>"; };
+		EAB9B8B9161CE0EB00F7EDEF /* HangmanWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HangmanWords.h; path = Words/HangmanWords.h; sourceTree = "<group>"; };
+		EAB9B8BA161CE0F000F7EDEF /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = words.plist; path = Words/words.plist; sourceTree = "<group>"; };
+		EAB9B8BC161CE0FF00F7EDEF /* hang5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hang5.jpg; path = hangmanImages3/hang5.jpg; sourceTree = "<group>"; };
+		EAB9B8BD161CE0FF00F7EDEF /* hang6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hang6.jpg; path = hangmanImages3/hang6.jpg; sourceTree = "<group>"; };
+		EAB9B8BE161CE0FF00F7EDEF /* hang7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hang7.jpg; path = hangmanImages3/hang7.jpg; sourceTree = "<group>"; };
+		EAB9B8BF161CE0FF00F7EDEF /* hang8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hang8.jpg; path = hangmanImages3/hang8.jpg; sourceTree = "<group>"; };
+		EAB9B8C0161CE0FF00F7EDEF /* hang9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hang9.jpg; path = hangmanImages3/hang9.jpg; sourceTree = "<group>"; };
+		EAB9B8C1161CE0FF00F7EDEF /* hang10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hang10.jpg; path = hangmanImages3/hang10.jpg; sourceTree = "<group>"; };
+		EAB9B8C2161CE0FF00F7EDEF /* hang11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hang11.jpg; path = hangmanImages3/hang11.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +113,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA9045E3161D35DD00E37889 /* hangmanimages3 */ = {
+			isa = PBXGroup;
+			children = (
+				EAB9B8BC161CE0FF00F7EDEF /* hang5.jpg */,
+				EAB9B8BD161CE0FF00F7EDEF /* hang6.jpg */,
+				EAB9B8BE161CE0FF00F7EDEF /* hang7.jpg */,
+				EAB9B8BF161CE0FF00F7EDEF /* hang8.jpg */,
+				EAB9B8C0161CE0FF00F7EDEF /* hang9.jpg */,
+				EAB9B8C1161CE0FF00F7EDEF /* hang10.jpg */,
+				EAB9B8C2161CE0FF00F7EDEF /* hang11.jpg */,
+			);
+			name = hangmanimages3;
+			sourceTree = "<group>";
+		};
 		EAB9B857161CCEDB00F7EDEF = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +167,12 @@
 				EAB9B881161CCEDB00F7EDEF /* HangmanViewController_iPhone.xib */,
 				EAB9B884161CCEDB00F7EDEF /* HangmanViewController_iPad.xib */,
 				EAB9B86D161CCEDB00F7EDEF /* Supporting Files */,
+				EAB9B8AB161CCFAA00F7EDEF /* HangmanModel.h */,
+				EAB9B8AC161CCFAA00F7EDEF /* HangmanModel.m */,
+				EA9045E0161D17AA00E37889 /* Space.h */,
+				EA9045E1161D17AA00E37889 /* Space.m */,
+				EAB9B8B9161CE0EB00F7EDEF /* HangmanWords.h */,
+				EAB9B8B7161CE0DC00F7EDEF /* HangmanWords.m */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -133,6 +180,9 @@
 		EAB9B86D161CCEDB00F7EDEF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA9045E3161D35DD00E37889 /* hangmanimages3 */,
+				EAB9B8BA161CE0F000F7EDEF /* words.plist */,
+				EAB9B8B5161CD70E00F7EDEF /* placeholder.png */,
 				EAB9B86E161CCEDB00F7EDEF /* Hangman-Info.plist */,
 				EAB9B86F161CCEDB00F7EDEF /* InfoPlist.strings */,
 				EAB9B872161CCEDB00F7EDEF /* main.m */,
@@ -241,6 +291,15 @@
 				EAB9B87D161CCEDB00F7EDEF /* Default-568h@2x.png in Resources */,
 				EAB9B883161CCEDB00F7EDEF /* HangmanViewController_iPhone.xib in Resources */,
 				EAB9B886161CCEDB00F7EDEF /* HangmanViewController_iPad.xib in Resources */,
+				EAB9B8B6161CD70E00F7EDEF /* placeholder.png in Resources */,
+				EAB9B8BB161CE0F000F7EDEF /* words.plist in Resources */,
+				EAB9B8C3161CE0FF00F7EDEF /* hang5.jpg in Resources */,
+				EAB9B8C4161CE0FF00F7EDEF /* hang6.jpg in Resources */,
+				EAB9B8C5161CE0FF00F7EDEF /* hang7.jpg in Resources */,
+				EAB9B8C6161CE0FF00F7EDEF /* hang8.jpg in Resources */,
+				EAB9B8C7161CE0FF00F7EDEF /* hang9.jpg in Resources */,
+				EAB9B8C8161CE0FF00F7EDEF /* hang10.jpg in Resources */,
+				EAB9B8C9161CE0FF00F7EDEF /* hang11.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +337,9 @@
 				EAB9B873161CCEDB00F7EDEF /* main.m in Sources */,
 				EAB9B877161CCEDB00F7EDEF /* HangmanAppDelegate.m in Sources */,
 				EAB9B880161CCEDB00F7EDEF /* HangmanViewController.m in Sources */,
+				EAB9B8AD161CCFAA00F7EDEF /* HangmanModel.m in Sources */,
+				EAB9B8B8161CE0DC00F7EDEF /* HangmanWords.m in Sources */,
+				EA9045E2161D17AA00E37889 /* Space.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -353,12 +416,15 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -366,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -373,6 +440,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -381,16 +449,26 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
 		EAB9B89F161CCEDB00F7EDEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hangman/Hangman-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Hangman/Hangman-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -398,10 +476,19 @@
 		EAB9B8A0161CCEDB00F7EDEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hangman/Hangman-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Hangman/Hangman-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -459,6 +546,7 @@
 				EAB9B8A0161CCEDB00F7EDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAB9B8A1161CCEDB00F7EDEF /* Build configuration list for PBXNativeTarget "HangmanTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +555,7 @@
 				EAB9B8A3161CCEDB00F7EDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,5 +9,20 @@
 #import <Foundation/Foundation.h>
 
 @interface HangmanModel : NSObject
+{
+@private
+    NSMutableArray* _spaces;
+    CGRect _bounds;
+    NSString* _word;
+    NSInteger _numGuessesLeft;
+    NSInteger _currentState;
+}
+
+-(id)initWithBounds:(CGRect)rect;
+-(void)createAndAddSpaceInBounds:(CGRect)bounds withCharacter:(NSString*)c;
+-(NSString*)getWord;
+-(NSMutableArray*)getSpaces;
+-(NSInteger)getNumGuessesLeft;
+-(NSMutableArray*)guessedLetter:(NSString*)guess;
 
 @end
