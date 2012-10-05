@@ -41,7 +41,6 @@
     [hangManSubview setBounds:hangManBounds];
     hangManSubview.center = CGPointMake(272/2+25, 75.0f);
     [_ourView addSubview:hangManSubview];
-    [hangManSubview release];
     [_ourView setNeedsDisplay];
     [self setUpWord];
     [self setUpKeyboard];
@@ -50,8 +49,8 @@
 -(void)setUpWord
 {
     //Place word and placeholders on page
-    NSString *word = [_ourModel getWord];
-    CGRect labelBounds = CGRectMake(0.0f,0.0f,25.0f,25.0f);
+    NSString *word = [_ourModel getCurrentWord];
+    CGRect labelBounds = CGRectMake(0.0f,0.0f,20.0f,20.0f);
     CGPoint center = CGPointMake([_ourView bounds].origin.x,[_ourView bounds].origin.y + 175.0f);
     
     NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
@@ -86,7 +85,6 @@
         l.backgroundColor = [UIColor clearColor];
         l.textColor = [UIColor blackColor];
         [_ourView addSubview:l];
-        [l release];
         //Place Space over it
         [_ourModel createAndAddSpaceInBounds:labelBounds withCharacter:s];
         
@@ -98,8 +96,6 @@
         [placeholderSubview setTag:x];
         placeholderSubview.center = center;
         [_ourView addSubview:placeholderSubview];
-        
-        [placeholderSubview release];
     }
 
     [_ourView setNeedsDisplay];
@@ -110,7 +106,7 @@
     CGRect keyBounds = CGRectMake(0.0f,0.0f,35.0f,35.0f);
     CGPoint center = CGPointMake([_ourView bounds].origin.x - 20,[_ourView bounds].origin.y + 300.0f);
 
-    NSArray* letters = [[NSArray alloc] initWithObjects:@"p", @"y", @"f", @"g", @"c", @"r", @"l", @"a", @"o", @"e", @"u", @"i", @"d", @"h", @"t", @"n", @"s", @"q", @"j", @"k", @"x", @"b", @"m", @"w", @"v", @"z", nil];
+    NSArray* letters = [[NSArray alloc] initWithObjects:@"P", @"Y", @"F", @"G", @"C", @"R", @"L", @"A", @"O", @"E", @"U", @"I", @"D", @"H", @"T", @"N", @"S", @"Q", @"J", @"K", @"X", @"B", @"M", @"W", @"V", @"Z", nil];
     for (NSInteger i=0; i<26; i++)
     {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -139,7 +135,6 @@
         [button addTarget:self action:@selector(guessedLetter:) forControlEvents:UIControlEventTouchUpInside];
         
         [_ourView addSubview:button];
-        [button release];
     }
     
     [_ourView setNeedsDisplay];
@@ -166,6 +161,7 @@
             //Remove all spaces over letters equal to our guess
             //This also removes your guess since it has same tag
             [[_ourView viewWithTag:[obj getTag]] removeFromSuperview];
+            [_ourModel removeSpace:(Space*)obj];
         } else{
             //Remove the hangman view and add next one
             if ([obj isKindOfClass:[NSNumber class]]){
@@ -185,7 +181,6 @@
                 hangManSubview.center = CGPointMake(272/2+25, 75.0f);
                 [hangManSubview setBounds:hangManBounds];
                 [_ourView addSubview:hangManSubview];
-                [hangManSubview release];
                 
                 //Remove letter from keyboard by tag: unichar ASCII value of the char
                 //[sender removeFromSuperview];
@@ -194,25 +189,36 @@
     }
     [sender setHidden:YES];
     [_ourView bringSubviewToFront:sender];
+    
+    NSLog(@"numguessesleft is %d", [_ourModel getNumGuessesLeft]);
     //Check if game is over
     if ([[_ourModel getSpaces] count] == 0)
     {
         //You won!
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You Won!" message:@"Congratulations" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil, nil];
-        [_ourView addSubview:alert];
-        [alert release];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You Won!" message:@"Congratulations" delegate:self cancelButtonTitle:@"New Game" otherButtonTitles:nil, nil];
+        [alert setAlertViewStyle:UIAlertViewStyleDefault];
+        [alert show];
         
     } else if ([_ourModel getNumGuessesLeft] == 0)
     {
         //You Lost
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You Lost!" message:@"Better luck next time." delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil, nil];
-        [_ourView addSubview:alert];
-        [alert release];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You Lost!" message:[NSString stringWithFormat:@"Better luck next time. The word was %@", [_ourModel getCurrentWord]] delegate:self cancelButtonTitle:@"New Game" otherButtonTitles:nil, nil];
+        [alert setAlertViewStyle:UIAlertViewStyleDefault];
+        [alert show];
     }
     
     
     [_ourView setNeedsDisplay];
     
+}
+
+#pragma mark - Alert View Delegate
+
+//Restart game
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+	if (buttonIndex == [alertView cancelButtonIndex]) {
+		[self viewDidLoad];
+	}
 }
 
 -(void)dealloc

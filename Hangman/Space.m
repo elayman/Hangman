@@ -29,11 +29,11 @@
         _xPosition = xPos;
         _yPosition = yPos;
         
-        _size = 15.0f;
+        _size = 20.0f;
         
         _image = [[UIImage alloc] initWithContentsOfFile:@"placeholder.png"];
         
-        _character = c;
+        _character = [c copy];
         
         //tag = tag + 1;
         unichar x = [c characterAtIndex:0];

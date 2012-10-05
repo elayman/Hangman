@@ -19,10 +19,8 @@
     {
         _spaces = [[NSMutableArray alloc] init];
         _bounds = rect;
-        HangmanWords* words = [[HangmanWords alloc] init];
-        _word = [[words getWord] retain];
-        [words release];
         
+        [self generateWord];
         _numGuessesLeft = 6;
         _currentState = 5;
         
@@ -66,7 +64,14 @@
     [newSpace release];
 }
 
--(NSString*)getWord
+-(void)generateWord
+{
+    HangmanWords* words = [[HangmanWords alloc] init];
+    _word = [[words getWord] retain];
+    [words release];
+}
+
+-(NSString*)getCurrentWord
 {
     return _word;
 }
@@ -85,7 +90,7 @@
 {
     NSMutableArray *toBeRemovedItems = [[NSMutableArray alloc] init];
     if ([_word rangeOfString:guess].location == NSNotFound) {
-        NSLog(@"string does not contain character you selected");
+        NSLog(@"%@ does not contain %@", _word, guess);
         //Subtract one guess
         _numGuessesLeft = _numGuessesLeft - 1;
         //Add currentState to remove view and add next one
@@ -96,18 +101,23 @@
         BOOL guessedCorrect = NO;
         for (Space *s in _spaces)
         {
+            NSLog(@"space's character is %@",[s getCharacter]);
             if ([guess isEqualToString:[s getCharacter]])
             {
                 //Add to array to be removed in controller
                 [toBeRemovedItems addObject:s];
-                
-                //Remove space from array
-                [_spaces removeObject:s];
+
                 guessedCorrect = YES;     
             }
         }
     }
     return toBeRemovedItems;
+}
+
+-(void)removeSpace:(Space*)s
+{
+    //Remove space from array
+    [_spaces removeObject:s];
 }
 -(void)dealloc
 {

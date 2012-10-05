@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Space.h"
 
 @interface HangmanModel : NSObject
 {
@@ -20,9 +21,11 @@
 
 -(id)initWithBounds:(CGRect)rect;
 -(void)createAndAddSpaceInBounds:(CGRect)bounds withCharacter:(NSString*)c;
--(NSString*)getWord;
+-(void)generateWord;
+-(NSString*)getCurrentWord;
 -(NSMutableArray*)getSpaces;
 -(NSInteger)getNumGuessesLeft;
 -(NSMutableArray*)guessedLetter:(NSString*)guess;
+-(void)removeSpace:(Space*)s;
 
 @end
