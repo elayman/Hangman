@@ -28,7 +28,7 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     _ourView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, width, height)];
-    [_ourView setBackgroundColor:[UIColor greenColor]];
+    [_ourView setBackgroundColor:[UIColor whiteColor]];
     self.view = _ourView;
     //Set up first hangman image
     NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
