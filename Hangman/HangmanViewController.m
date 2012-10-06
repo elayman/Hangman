@@ -55,7 +55,7 @@
     
     NSBundle *thisBundle = [NSBundle bundleForClass:[self class]];
     UIImage *placeholderImage = [[UIImage alloc] initWithContentsOfFile:[thisBundle pathForResource:@"placeholder" ofType:@"png"]];
-    for (NSInteger i=0; i<[word length]-1; i++)
+    for (NSInteger i=0; i<[word length]; i++)
     {
         //charactersAvailableForString
         NSRange range = NSMakeRange(i, 1);
@@ -69,7 +69,8 @@
         {
             if ([s isEqualToString:@" "])
             {
-                newCenter = CGPointMake(center.x + 55.0f, center.y);
+                center = CGPointMake(center.x + 25.0f, center.y);
+                continue;
             } else
             {
                 newCenter = CGPointMake(center.x + 30.0f, center.y);
@@ -83,7 +84,9 @@
         //Place label
         UILabel *l = [[UILabel alloc] initWithFrame:labelBounds];
         l.backgroundColor = [UIColor clearColor];
+        l.center = center;
         l.textColor = [UIColor blackColor];
+        l.text = s;
         [_ourView addSubview:l];
         //Place Space over it
         [_ourModel createAndAddSpaceInBounds:labelBounds withCharacter:s];
@@ -127,7 +130,7 @@
         //Place label
         [button setTitle:letters[i] forState:UIControlStateNormal];
         //unichar x = [letters[i] characterAtIndex:0];
-        //[button setTag:x];
+        //[button setTag:0];
         button.center = center;
         button.bounds = keyBounds;
         
